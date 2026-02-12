@@ -23,11 +23,20 @@ public class LexicalTwistPuzzle {
 
         }
         String reversed = new StringBuilder(word1).reverse().toString();
-
         if(reversed.equalsIgnoreCase(word2)) {
-            System.out.println("Words are reverse of each other");
-        } else {
-            System.out.println("Words are NOT reverse of each other");
+
+            String lower = reversed.toLowerCase();
+            String result = "";
+
+            for(char ch : lower.toCharArray()) {
+                if("aeiou".indexOf(ch) != -1) {
+                    result += "@";
+                } else {
+                    result += ch;
+                }
+            }
+
+            System.out.println("Transformed word: " + result);
         }
 
     }
