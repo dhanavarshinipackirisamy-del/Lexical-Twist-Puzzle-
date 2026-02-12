@@ -38,6 +38,26 @@ public class LexicalTwistPuzzle {
 
             System.out.println("Transformed word: " + result);
         }
+        else {
+
+            String combined = (word1 + word2).toUpperCase();
+
+            int vowelCount = 0;
+            int consonantCount = 0;
+
+            for(char ch : combined.toCharArray()) {
+
+                if("AEIOU".indexOf(ch) != -1) {
+                    vowelCount++;
+                }
+                else if(Character.isLetter(ch)) {
+                    consonantCount++;
+                }
+            }
+
+            System.out.println("Vowels: " + vowelCount);
+            System.out.println("Consonants: " + consonantCount);
+        }
 
     }
 }
