@@ -9,11 +9,17 @@ public class LexicalTwistPuzzle {
         System.out.println("Lexical Twist Puzzle");
 
         System.out.print("Enter first word: ");
+
         String word1 = sc.nextLine();
 
         System.out.print("Enter second word: ");
         String word2 = sc.nextLine();
 
         System.out.println("You entered: " + word1 + " and " + word2);
+        if(word1.contains(" ") || word2.contains(" ")) {
+            System.out.println("Invalid word input. Only single words allowed.");
+            return;
+        }
+
     }
 }
